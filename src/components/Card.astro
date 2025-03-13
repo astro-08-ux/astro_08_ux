@@ -1,0 +1,15 @@
+---
+import ButtonDark from "./ButtonDark.astro";
+const { name, role, description, mail, imageSrc } = Astro.props;
+---
+
+<article class="card">
+  <img src=`${imageSrc}` alt=`Image og ${name}` />
+  <div class="card_container">
+    <h3>{name}</h3>
+    <p class="title">{role}</p>
+    <p>{description}</p>
+    <p>{mail}</p>
+    <p><ButtonDark text=`Learn more` /></p>
+  </div>
+</article>
