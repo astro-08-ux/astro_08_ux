@@ -1,12 +1,58 @@
 ---
 import ButtonLight from "./ButtonLight.astro";
+
+// Definer dine links og logo her
+const links = [
+  { href: "#forside", text: "Forside" },
+  { href: "#frivillig", text: "Bliv frivillig" },
+  { href: "#om", text: "Om os" }
+];
+
+const logo = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <circle cx="25" cy="25" r="20" fill="blue" />
+  </svg>
+);
 ---
 
-<nav>
-  <p class="logo"><a href="#">LOGO</a></p>
-  <ul>
-    <li><a href="#">Bliv frivillig</a></li>
-    <li><a href="#">punkt 2</a></li>
+<nav class="navigation">
+  <!-- Logo -->
+  <a href="/" class="logo">
+    {logo}  <!-- Hvis logo er SVG-kode, vises den her -->
+  </a>
+
+  <!-- Menu -->
+  <ul class="nav-links">
+    {links.map((link) => (
+      <li><a href={link.href}>{link.text}</a></li>
+    ))}
     <li><ButtonLight text="Find os" /></li>
   </ul>
 </nav>
+
+<style>
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: white;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+</style>
