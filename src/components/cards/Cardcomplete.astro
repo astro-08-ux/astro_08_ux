@@ -1,0 +1,31 @@
+---
+import Cardhistorie1 from "./Cardhistorie1.astro";
+const { overskrift} = Astro.props;
+---
+
+<article class="card_box">
+  <h3>{overskrift}</h3>
+  <div class="card">
+<Cardhistorie1 overskrift="Emma, 21 år" description={`    “Dit nærvær & din tid kan være det lys, der guider nogen ud af mørket. At vide, at jeg kan være en del af sådan en positiv forandring, giver mit arbejde en dybere mening.”`}imageSrc="src/assets/BilderCards/historierfrivillig1.png"/>
+<Cardhistorie1 overskrift="Lone, 72 år" description={`    "Som frivillig hos Misbrugsportalen har jeg oplevet, hvor stor en forskel man kan gøre. Det er utrolig givende at stå ved siden af nogen, der kæmper, og se dem finde håb igen."`}imageSrc="src/assets/BilderCards/historiefrivillig2.png"/>
+<Cardhistorie1 overskrift="Magnus, 34 år" description={`    “Hver gang jeg møder nye mennesker gennem vores programmer, føler jeg, at jeg ikke bare hjælper dem, men også udvikler mig selv. Jeg er taknemmelig for at kunne give håb og støtte, hvor det virkelig tæller."`}imageSrc="src/assets/BilderCards/historiefrivillig3.png"/>
+</div>
+</article>
+
+<style> 
+  .card {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; /* Avstand mellom kortene */
+  padding: 20px 0;
+}
+ .card_box h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: lighter;
+ }
+
+
+
+
+</style>

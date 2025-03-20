@@ -1,0 +1,57 @@
+---
+const { overskrift, description,imageSrc } = Astro.props;
+---
+
+<article class="card">
+  <img src=`${imageSrc}` alt=`Image og ${overskrift}` />
+  <div class="card_container">
+    <h3>{overskrift}</h3>
+    <p>{description}</p>
+    </div>
+</article>
+
+<style>
+  .card {
+  border: 2px solid #ddd; /* Gir rammen rundt kortet */
+  border-radius: 15px; /* Avrundede hjørner */
+  overflow: hidden; /* Sikrer at innholdet holder seg innenfor rammen */
+  width: 240px; /* Juster etter behov */
+  background-color:#F7F5F5 ;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Myk skygge */
+  padding: 20px; /* Lik padding rundt hele kortet */
+}
+
+.card img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.card img {
+  width: 100%; /* Sørger for at bildet fyller containeren */
+  height: auto; /* Bevarer bildeforholdet */
+  max-height: 180px; /* Juster høyden etter behov */
+  object-fit: contain; /* Hindrer bildet i å bli beskåret */
+}
+
+.card_container {
+  padding: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #37BFB1; /* Lys grønn farge for overskriften */
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+}
+
+.card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  text-align: left;
+}
+
+</style>

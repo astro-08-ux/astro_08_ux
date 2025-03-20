@@ -1,0 +1,35 @@
+---
+import Forstecard1 from "./Forstecard1.astro";
+const { overskrift} = Astro.props;
+---
+
+<article class="card_box">
+  <h3>{overskrift}</h3>
+  <div class="card">
+<Forstecard1 overskrift="Akutrådgivning" description={`Her har du vagter over telefon med udelukkende
+enkeltsamtaler, hvor rådsøgere ringer ind.
+Vores vigtigste opgave er at lytte og hjælpe hver enkelt rådsøger
+med at italesætte sin situation og sine behov.`} imageSrc="src/assets/BilderCards/img1forste.png"/>
+<Forstecard1 overskrift="Individuelle samtaleforløb" description={`Til samtaleforløb er du tovholder og personlig
+rådgiver, hvor du følger en rådsøger i en proces
+over 8 uger eller 8 samtaler. Vi betragter os ikke som eksperter, men som autentiske samtalepartnere.`} imageSrc="src/assets/BilderCards/img2forste.png"/>
+<Forstecard1 overskrift="Gruppeforløb" description={`Vores terapeutiske gruppeforløb følger samme proces som individuelle samtaler, men i en gruppe af gangen. Her er du med til at skabe et trygt sammenhold mellem deltagerne, så de kan bibeholde hinandens støtte efter forløbet.`} imageSrc="src/assets/BilderCards/img3forste.png"/>
+</div>
+</article>
+<style> 
+  .card {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; /* Avstand mellom kortene */
+  padding: 20px 0;
+}
+.card_box h3 {
+  text-align: center;
+  color: #37BFB1;
+  font-size: 30px;
+  font-weight: lighter;
+ }
+
+
+
+</style>

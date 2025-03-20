@@ -1,0 +1,38 @@
+---
+const { overskrift, description,imageSrc } = Astro.props;
+---
+
+<article class="card">
+  <img src=`${imageSrc}` alt=`Image og ${overskrift}` />
+  <div class="card_container">
+    <h3>{overskrift}</h3>
+    <p>{description}</p>
+    </div>
+</article>
+
+<style> 
+  
+
+.card {
+  width: 300px; 
+  text-align: center;
+}
+
+.card img {
+  width: 100%; 
+  height: auto; /* Bevarer bildeforholdet */
+  display: block; /* Fjern ekstra mellomrom under bildet */
+  background: #e0e0e0; /* Placeholder-farge */
+}
+
+.card h3 {
+  font-weight: lighter;
+}
+
+.card p {
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+</style>
